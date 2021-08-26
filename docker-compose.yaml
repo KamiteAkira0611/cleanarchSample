@@ -1,0 +1,13 @@
+version: "2.4"
+services:
+  golang:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: clean-arch-golang
+    container_name: clean-arch-golang
+    volumes:
+      - .:/app
+    ports:
+      - 9999:8080
+    tty: true
